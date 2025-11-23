@@ -10,7 +10,8 @@ export const metadata = {
     "Boost your business with Digital Synk, a trusted digital marketing agency. We specialize in SEO, Local SEO, Google & Facebook Ads, and Web Designing Services.",
   generator: "v0.app",
   other: {
-    "google-site-verification": "mlMVsDQs6pWGilZu_wR2Qkxp-wR2dbJUpyTNKMTdwN8",
+    "google-site-verification": "S9qL_iMH6JgkvzPWWS-NDn3VATqEJr3aYFPDBC1teS8",
+    
   },
 }
 
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
         <Suspense fallback={<div>Loading...</div>}>
           {children}
         </Suspense>
-        
+
 
         <Analytics />
       </body>
