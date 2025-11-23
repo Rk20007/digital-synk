@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         <meta name="google-site-verification" content="mlMVsDQs6pWGilZu_wR2Qkxp-wR2dbJUpyTNKMTdwN8" />
         
       </head>
+      
 
       <body
         className={`antialiased font-sans ${GeistSans.variable} ${GeistMono.variable}`}
