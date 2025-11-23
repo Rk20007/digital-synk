@@ -9,6 +9,9 @@ export const metadata = {
   description:
     "Boost your business with Digital Synk, a trusted digital marketing agency. We specialize in SEO, Local SEO, Google & Facebook Ads, and Web Designing Services.",
   generator: "v0.app",
+  other: {
+    "google-site-verification": "mlMVsDQs6pWGilZu_wR2Qkxp-wR2dbJUpyTNKMTdwN8",
+  },
 }
 
 export default function RootLayout({ children }) {

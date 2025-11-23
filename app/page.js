@@ -336,10 +336,8 @@ export default function HomePage() {
               <h2 className="text-balance text-3xl font-bold md:text-4xl lg:text-5xl">
                 Comprehensive Digital Solutions
               </h2>
-              <p className="mt-4 text-pretty text-lg text-muted-foreground max-w-2xl mx-auto">
-                We offer comprehensive digital marketing services to help grow your business online. Our expert team
-                specializes in SEO, Local SEO, Google Ads, Facebook Ads, Social Media Marketing, Content Marketing, Web
-                Design, and Web Development.
+              <p className="mt-4 text-pretty text-lg text-muted-foreground max-w-2xl mx-auto text-justify">
+                We offer comprehensive digital marketing services to help grow your business online. Our expert team specializes in SEO to improve your Google rankings, local SEO to attract nearby customers, Google Ads and Facebook ads to drive targeted traffic, and social media marketing to enhance your brand's presence. We also create engaging content and build fast, modern, user-friendly websites through our web design and development services. Whether you're a local business or looking to expand globally, Digital Sync provides reliable, results-driven digital solutions.
               </p>
             </div>
 
