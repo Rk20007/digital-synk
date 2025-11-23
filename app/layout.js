@@ -9,22 +9,23 @@ export const metadata = {
   description:
     "Boost your business with Digital Synk, a trusted digital marketing agency. We specialize in SEO, Local SEO, Google & Facebook Ads, and Web Designing Services.",
   generator: "v0.app",
-  other: {
-    "google-site-verification": "S9qL_iMH6JgkvzPWWS-NDn3VATqEJr3aYFPDBC1teS8",
-    
-  },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Google Site Verification (This will show in PAGE SOURCE) */}
+        <meta name="google-site-verification" content="mlMVsDQs6pWGilZu_wR2Qkxp-wR2dbJUpyTNKMTdwN8" />
+        
+      </head>
+
       <body
         className={`antialiased font-sans ${GeistSans.variable} ${GeistMono.variable}`}
       >
         <Suspense fallback={<div>Loading...</div>}>
           {children}
         </Suspense>
-
 
         <Analytics />
       </body>
