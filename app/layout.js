@@ -17,8 +17,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+      <body
+        className={`antialiased font-sans ${GeistSans.variable} ${GeistMono.variable}`}
+      >
+        <Suspense fallback={<div>Loading...</div>}>
+          {children}
+        </Suspense>
+
         <Analytics />
       </body>
     </html>
