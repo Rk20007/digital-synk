@@ -78,6 +78,7 @@ export async function GET() {
     await connectDB();
 
     const emails = await Email.find().sort({ createdAt: -1 });
+    
 
     return NextResponse.json({
       success: true,
