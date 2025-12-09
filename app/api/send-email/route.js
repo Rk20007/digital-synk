@@ -1,54 +1,93 @@
-import { NextResponse } from "next/server"
+import { NextResponse } from "next/server";
+import mongoose from "mongoose";
 
+// -----------------------------
+// 🔗 MongoDB CONNECTION
+// -----------------------------
+const MONGODB_URI = process.env.MONGODB_URI;
+
+async function connectDB() {
+  if (mongoose.connection.readyState === 1) return;
+
+  if (!MONGODB_URI) {
+    throw new Error("Please define MONGODB_URI in .env.local");
+  }
+
+  await mongoose.connect(MONGODB_URI, {
+    dbName: "digitalsynk",
+  });
+}
+
+// -----------------------------
+// 🗂️ Schema + Model
+// -----------------------------
+const EmailSchema = new mongoose.Schema(
+  {
+    type: String,
+    name: String,
+    email: String,
+    phone: String,
+    service: String,
+    preferredDate: String,
+    message: String,
+  },
+  { timestamps: true }
+);
+
+const Email = mongoose.models.Email || mongoose.model("Email", EmailSchema);
+
+// -----------------------------
+// 📨 POST → Save Form Data
+// -----------------------------
 export async function POST(request) {
   try {
-    const body = await request.json()
-    const { type, name, email, phone, service, preferredDate, message } = body
+    await connectDB();
 
-    // Email content based on type
-    const emailSubject =
-      type === "callback" ? `New Callback Request from ${name}` : `New Service Booking Request from ${name}`
+    const body = await request.json();
+    const { type, name, email, phone, service, preferredDate, message } = body;
 
-    const emailBody = `
-      Request Type: ${type === "callback" ? "Callback Request" : "Service Booking"}
-      
-      Name: ${name}
-      Email: ${email}
-      Phone: ${phone}
-      ${service ? `Service: ${service}` : ""}
-      ${preferredDate ? `Preferred Date: ${preferredDate}` : ""}
-      
-      Message:
-      ${message || "No message provided"}
-      
-      ---
-      This email was sent from digitalSynk.com contact form.
-    `
-
-    // In a real application, you would use a service like SendGrid, Resend, or Nodemailer
-    // For now, we'll log the email and return success
-    console.log("[v0] Email to send:", {
-      to: "businessinside9@gmail.com",
-      subject: emailSubject,
-      body: emailBody,
-    })
-
-    // Simulate email sending
-    // In production, replace this with actual email service
-    // Example with Resend:
-    // const { data, error } = await resend.emails.send({
-    //   from: 'onboarding@resend.dev',
-    //   to: 'businessinside9@gmail.com',
-    //   subject: emailSubject,
-    //   text: emailBody,
-    // })
+    const saved = await Email.create({
+      type,
+      name,
+      email,
+      phone,
+      service,
+      preferredDate,
+      message,
+    });
 
     return NextResponse.json({
       success: true,
-      message: "Email sent successfully",
-    })
+      message: "Data saved successfully",
+      data: saved,
+    });
   } catch (error) {
-    console.error("[v0] Error sending email:", error)
-    return NextResponse.json({ success: false, message: "Failed to send email" }, { status: 500 })
+    console.error("POST ERROR:", error);
+    return NextResponse.json(
+      { success: false, message: "Failed to save data" },
+      { status: 500 }
+    );
+  }
+}
+
+// -----------------------------
+// 📥 GET → Fetch All Saved Data
+// -----------------------------
+export async function GET() {
+  try {
+    await connectDB();
+
+    const emails = await Email.find().sort({ createdAt: -1 });
+
+    return NextResponse.json({
+      success: true,
+      data: emails,
+    });
+  } catch (error) {
+    console.error("GET ERROR:", error);
+    return NextResponse.json(
+      { success: false, message: "Failed to fetch data" },
+      { status: 500 }
+    );
   }
 }

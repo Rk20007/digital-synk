@@ -18,8 +18,9 @@ export default function RootLayout({ children }) {
         {/* ✅ Google Site Verification (This will show in PAGE SOURCE) */}
         <meta name="google-site-verification" content="mlMVsDQs6pWGilZu_wR2Qkxp-wR2dbJUpyTNKMTdwN8" />
         
+        
       </head>
-      
+
 
       <body
         className={`antialiased font-sans ${GeistSans.variable} ${GeistMono.variable}`}
