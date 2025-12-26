@@ -9,6 +9,21 @@ export const metadata = {
   description:
     "Boost your business with Digital Synk, a trusted digital marketing agency. We specialize in SEO, Local SEO, Google & Facebook Ads, and Web Designing Services.",
   generator: "v0.app",
+  keywords: ["Digital Marketing Agency", "SEO Services", "Local SEO", "Social Media Marketing", "Web Development", "PPC Advertising", "Digital Synk"],
+  alternates: {
+    canonical: "https://www.digitalsynk.com/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default function RootLayout({ children }) {
