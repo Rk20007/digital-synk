@@ -100,10 +100,10 @@ export default function BookingModal({ isOpen, onClose, defaultTab = "callback" 
           >
             <X className="h-5 w-5" />
           </button>
-          <CardTitle className="text-2xl md:text-3xl pr-10">
+          <CardTitle className="text-2xl md:text-3xl pr-10 pt-4">
             {activeTab === "callback" ? "Request a Callback" : "Book a Service"}
           </CardTitle>
-          <CardDescription className="text-primary-foreground/90">
+          <CardDescription className="text-primary-foreground/90 pb-4">
             Fill out the form below and we'll get back to you within 24 hours
           </CardDescription>
         </CardHeader>

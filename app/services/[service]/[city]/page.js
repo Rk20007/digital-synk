@@ -211,7 +211,7 @@ const servicesData = {
 }
 
 export async function generateMetadata({ params }) {
-  const { service, city } = params
+  const { service, city } = await params
   const serviceData = servicesData[service]
   const cityName = city
     .split("-")
@@ -225,8 +225,8 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default function ServiceDetailPage({ params }) {
-  const { service, city } = params
+export default async function ServiceDetailPage({ params }) {
+  const { service, city } = await params
   const serviceData = servicesData[service]
   const cityName = city
     .split("-")
@@ -256,7 +256,7 @@ export default function ServiceDetailPage({ params }) {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary/10 via-secondary/10 to-background py-20 md:py-32">
+        <section className="bg-gradient-to-br from-primary/10 via-secondary/10 to-background py-20 md:py-2">
           <div className="container mx-auto px-4 md:px-6">
             <div className="mb-6">
               <Button asChild variant="ghost" size="sm">
@@ -265,37 +265,70 @@ export default function ServiceDetailPage({ params }) {
                 </Link>
               </Button>
             </div>
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-              <div className="flex flex-col justify-center space-y-6">
-                <div className="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary w-fit">
-                  {cityName} Services
-                </div>
-                <h1 className="text-balance text-4xl font-bold md:text-5xl lg:text-6xl">
-                  {serviceData.title} in {cityName}
-                </h1>
-                <p className="text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-                  {serviceData.description}
-                </p>
-                <div className="flex flex-col gap-4 sm:flex-row">
-                  <Button asChild size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90">
-                    <Link href="/contact">Get a Free Quote</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <a href="tel:+919050580887">
-                      <Phone className="mr-2 h-4 w-4" /> Call Us Now
-                    </a>
-                  </Button>
-                </div>
-              </div>
-              <div className="relative aspect-square overflow-hidden rounded-2xl shadow-2xl lg:aspect-auto">
-                <img src={`/${serviceData.image}.jpg`} alt={serviceData.title} className="h-full w-full object-cover" />
-              </div>
-            </div>
+         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16 pb-6">
+  
+  {/* LEFT CONTENT */}
+  <div className="flex flex-col justify-center space-y-6">
+    <div className="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary w-fit">
+      {cityName} Services
+    </div>
+
+    <h1 className="text-balance text-4xl font-bold md:text-5xl lg:text-6xl">
+      {serviceData.title} in {cityName}
+    </h1>
+
+    <p className="text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
+      {serviceData.description}
+    </p>
+
+    <div className="flex flex-col gap-4 sm:flex-row">
+      <Button
+        asChild
+        size="lg"
+        className="bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+      >
+        <Link href="/contact">Get a Free Quote</Link>
+      </Button>
+
+      <Button asChild variant="outline" size="lg">
+        <a href="tel:+919050580887">
+          <Phone className="mr-2 h-4 w-4" /> Call Us Now
+        </a>
+      </Button>
+    </div>
+  </div>
+
+  {/* RIGHT IMAGE */}
+  <div className="relative flex justify-center lg:justify-end">
+    
+    {/* Glow Background */}
+    <div className="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-primary/20 via-secondary/20 to-purple-400/20 blur-2xl opacity-80" />
+
+    {/* Image Card */}
+    <div className="relative rounded-2xl bg-white p-2 shadow-2xl ring-1 ring-black/5">
+      <img
+        src={`/${serviceData.image}.jpg`}
+        alt={serviceData.title}
+        className="
+          w-full
+          max-w-[560px]
+          rounded-xl
+          object-cover
+          transition-transform
+          duration-300
+          hover:scale-[1.03]
+        "
+      />
+    </div>
+
+  </div>
+</div>
+
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 md:py-32">
+        <section className="py-20 md:py-12">
           <div className="container mx-auto px-4 md:px-6">
             <div className="mb-12 text-center">
               <h2 className="text-balance text-3xl font-bold md:text-4xl lg:text-5xl">What's Included</h2>

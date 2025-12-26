@@ -104,7 +104,7 @@ export default function HomePage({city}) {
       title: "Content Marketing",
       description: "Quality content drives engagement and SEO success. We create compelling content that converts.",
       icon: PenTool,
-      image: "/content-marketing-blog-writing-strategy.jpg",
+      image: "/content-writing-copywriting-blog-articles.jpg",
       slug: "content-marketing",
       details: [
         "Blogs, articles, and storytelling",
@@ -145,7 +145,7 @@ export default function HomePage({city}) {
       description:
         "Stay connected with your customers using personalized, automated email campaigns that drive results.",
       icon: Mail,
-      image: "/email-marketing-automation-campaigns.jpg",
+      image: "/email-marketing.png",
       slug: "email-marketing",
       details: [
         "Segmented lists for better targeting",
@@ -333,14 +333,14 @@ export default function HomePage({city}) {
               <h2 className="text-balance text-3xl font-bold md:text-4xl lg:text-5xl">
                 Comprehensive Digital Solutions in {city}
               </h2>
-              <p className="mt-4 text-pretty text-lg text-muted-foreground max-w-2xl mx-auto text-justify">
+              <p className="mt-4 text-pretty text-lg text-muted-foreground max-w-6xl mx-auto text-justify">
                 We offer comprehensive digital marketing services to help grow your business online in {city}. Our
                 expert team specializes in SEO to improve your Google rankings, local SEO to attract nearby customers,
                 Google Ads and Facebook ads to drive targeted traffic, and social media marketing to enhance your brand's presence. Whether you're a local business in {city} or looking to expand globally, Digital Sync provides reliable, results-driven digital solutions.
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
                 <Link key={service.title} href={`/services/${service.slug}`}>
                   <Card className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-primary/50 hover:-translate-y-2 cursor-pointer h-full">

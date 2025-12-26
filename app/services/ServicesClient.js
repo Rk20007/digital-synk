@@ -121,7 +121,7 @@ export default function ServicesClient() {
       title: "AI Integration & Automation Flows",
       description: "Transform your business with intelligent AI solutions and automated workflows.",
       icon: Sparkles,
-      image: "/ai-artificial-intelligence-automation-technology.jpg",
+      image: "/ai-automation.png",
       features: [
         "AI Chatbot Development",
         "Process Automation",
@@ -131,27 +131,13 @@ export default function ServicesClient() {
         "Custom AI Solutions",
       ],
     },
-    {
-      slug: "web-development",
-      title: "Website Design & Development",
-      description: "Beautiful, fast, and conversion-optimized websites for your business.",
-      icon: Globe,
-      image: "/modern-responsive-website-design.jpg",
-      features: [
-        "Business Website (One-page or Multi-page)",
-        "Mobile-Responsive Design",
-        "WhatsApp Chat Integration",
-        "Lead Capture Forms",
-        "Fast Loading Speed",
-        "Shopify Store Development",
-      ],
-    },
+ 
     {
       slug: "content-writing",
       title: "Content Writing & Copywriting",
       description: "Compelling content that engages your audience and drives action.",
       icon: PenTool,
-      image: "/content-writing-copywriting-laptop.jpg",
+      image: "/content-writing-copywriting-blog-articles.jpg",
       features: [
         "Website Content Writing",
         "SEO-Friendly Blogs & Articles",
@@ -166,7 +152,7 @@ export default function ServicesClient() {
       title: "Graphic Designing",
       description: "Eye-catching designs that make your brand stand out.",
       icon: Palette,
-      image: "/graphic-design-creative-workspace.jpg",
+      image: "/graphic-design.webp",
       features: [
         "Social Media Post Design",
         "WhatsApp Story Creatives",
@@ -191,7 +177,7 @@ export default function ServicesClient() {
                 What We Offer
               </div>
               <h1 className="text-balance text-4xl font-bold md:text-5xl lg:text-6xl">Our Services</h1>
-              <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
+              <p className="mt-2 text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
                 Comprehensive digital marketing solutions tailored to help your business succeed online
               </p>
               <div className="pt-4">
@@ -208,7 +194,7 @@ export default function ServicesClient() {
         </section>
 
         {/* Services Grid with Enhanced Cards */}
-        <section className="py-20 md:py-32">
+        <section className="py-20 md:py-12">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
