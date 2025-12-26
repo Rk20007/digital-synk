@@ -33,9 +33,9 @@ export default function Header() {
             <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
               Contact
             </Link>
-            <Button asChild size="sm" variant="outline">
+            {/* <Button asChild size="sm" variant="outline">
               <Link href="/contact">Contact Us</Link>
-            </Button>
+            </Button> */}
             <Button size="sm" onClick={() => setBookingModalOpen(true)}>
               Book Now
             </Button>
