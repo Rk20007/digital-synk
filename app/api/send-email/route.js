@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 
+export const dynamic = "force-dynamic";
+
 // -----------------------------
 // 🔗 MongoDB CONNECTION
 // -----------------------------
@@ -77,9 +79,7 @@ export async function GET() {
   try {
     await connectDB();
 
-    const emails = await Email.find().sort({ createdAt: -1 });
-    
-
+    const emails = await Email.find().sort({ createdAt: -1 }).lean();
 
     return NextResponse.json({
       success: true,
@@ -88,7 +88,7 @@ export async function GET() {
   } catch (error) {
     console.error("GET ERROR:", error);
     return NextResponse.json(
-      { success: false, message: "Failed to fetch data" },
+      { success: false, message: "Failed to fetch data", error: error.message },
       { status: 500 }
     );
   }
