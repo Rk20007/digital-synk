@@ -87,12 +87,12 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
                 <div className="flex flex-col gap-1">
-                  <a href="tel:+919050580887" className="text-muted-foreground hover:text-primary transition-colors">
-                    +91 9050580887
+                  <a href="tel:+919671782681" className="text-muted-foreground hover:text-primary transition-colors">
+                    +91 9671782681
                   </a>
-                  <a href="tel:+917740847114" className="text-muted-foreground hover:text-primary transition-colors">
+                  {/* <a href="tel:+917740847114" className="text-muted-foreground hover:text-primary transition-colors">
                     +91 7740847114
-                  </a>
+                  </a> */}
                 </div>
               </li>
               <li className="flex items-start gap-2">
@@ -106,7 +106,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                <span className="text-muted-foreground">JMD Megapolis, Gurgaon, Haryana, India</span>
+                <span className="text-muted-foreground">9th, Floor JMD Megapolis, Gurgaon, Haryana, India</span>
               </li>
             </ul>
           </div>

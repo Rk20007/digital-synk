@@ -279,19 +279,43 @@ export default function BookingModal({ isOpen, onClose, defaultTab = "callback" 
                 />
               </div>
 
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={isSubmitting}
-                  className="flex-1 bg-gradient-to-r from-primary to-secondary hover:opacity-90"
-                >
-                  {isSubmitting ? "Sending..." : activeTab === "callback" ? "Request Callback" : "Book Service"}
-                </Button>
-                <Button type="button" size="lg" variant="outline" onClick={onClose} className="flex-1 bg-transparent">
-                  Cancel
-                </Button>
-              </div>
+             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 w-full">
+  <Button
+    type="submit"
+    size="lg"
+    disabled={isSubmitting}
+    className="
+      w-full
+      sm:flex-1
+      bg-gradient-to-r
+      from-primary
+      to-secondary
+      hover:opacity-90
+      text-base
+      rounded-full
+    "
+  >
+    {isSubmitting
+      ? "Sending..."
+      : activeTab === "callback"
+      ? "Request Callback"
+      : "Book Service"}
+  </Button>
+
+  <Button
+    type="button"
+    size="lg"
+    variant="outline"
+    className="
+      w-full
+      sm:flex-1
+      rounded-full
+    "
+  >
+    Cancel
+  </Button>
+</div>
+
 
               <p className="text-xs text-center text-muted-foreground">
                 By submitting this form, you agree to our terms and conditions

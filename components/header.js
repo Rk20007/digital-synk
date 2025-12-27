@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import BookingModal from "@/components/booking-modal"
 import Logo from "@/components/logo"
@@ -33,18 +33,33 @@ export default function Header() {
             <Link href="/contact" className="text-sm font-medium transition-colors hover:text-primary">
               Contact
             </Link>
-            {/* <Button asChild size="sm" variant="outline">
-              <Link href="/contact">Contact Us</Link>
-            </Button> */}
+            <a
+              href="tel:+1234567890"
+              className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full text-primary hover:bg-primary/20 transition-colors animate-pulse"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="text-sm font-bold">9671782681</span>
+            </a>
             <Button size="sm" onClick={() => setBookingModalOpen(true)}>
               Book Now
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="flex items-center gap-3 md:hidden">
+            <a
+              href="tel:+1234567890"
+              className="flex items-center gap-2 bg-primary/10 px-3 py-1.5 rounded-full text-primary hover:bg-primary/20 transition-colors animate-pulse"
+            >
+              <Phone className="h-4 w-4" />
+<span className="text-sm font-bold whitespace-nowrap">
+  98765&nbsp;43210
+</span>
+            </a>
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </nav>
 
         {/* Mobile Navigation */}

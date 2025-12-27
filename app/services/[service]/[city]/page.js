@@ -291,7 +291,7 @@ export default async function ServiceDetailPage({ params }) {
       </Button>
 
       <Button asChild variant="outline" size="lg">
-        <a href="tel:+919050580887">
+        <a href="tel:+919671782681">
           <Phone className="mr-2 h-4 w-4" /> Call Us Now
         </a>
       </Button>

@@ -111,7 +111,7 @@ export default function ContactPage() {
                           id="phone"
                           name="phone"
                           type="tel"
-                          placeholder="+91 9050580887"
+                          placeholder="+91 9671782681"
                           value={formData.phone}
                           onChange={handleChange}
                         />
@@ -187,15 +187,15 @@ export default function ContactPage() {
                           <CardTitle className="text-lg">Phone</CardTitle>
                           <CardDescription className="mt-2 space-y-1">
                             <div>
-                              <a href="tel:+919050580887" className="hover:text-primary">
-                                +91 9050580887
+                              <a href="tel:+919671782681" className="hover:text-primary">
+                                +91 9671782681
                               </a>
                             </div>
-                            <div>
+                            {/* <div>
                               <a href="tel:+917740847114" className="hover:text-primary">
                                 +91 7740847114
                               </a>
-                            </div>
+                            </div> */}
                           </CardDescription>
                           <p className="mt-1 text-sm text-muted-foreground">Mon-Sat 10am-7pm IST</p>
                         </div>
@@ -250,7 +250,7 @@ export default function ContactPage() {
                       digital marketing needs.
                     </CardDescription>
                     <Button asChild variant="secondary" size="lg" className="mt-4 w-full">
-                      <a href="tel:+919050580887">Schedule a Call</a>
+                      <a href="tel:+919671782681">Schedule a Call</a>
                     </Button>
                   </CardHeader>
                 </Card>
