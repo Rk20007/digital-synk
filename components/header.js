@@ -48,12 +48,13 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-3 md:hidden">
             <a
-              href="tel:+1234567890"
+              href="tel:+919671782681"
               className="flex items-center gap-2 bg-primary/10 px-3 py-1.5 rounded-full text-primary hover:bg-primary/20 transition-colors animate-pulse"
             >
               <Phone className="h-4 w-4" />
 <span className="text-sm font-bold whitespace-nowrap">
-  98765&nbsp;43210
+  96717&nbsp;82681
+  
 </span>
             </a>
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
