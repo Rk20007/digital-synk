@@ -1,5 +1,6 @@
 "use client"
 
+import { use } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { ArrowLeft, CheckCircle2, Phone, Mail, MapPin } from "lucide-react"
@@ -222,7 +223,7 @@ const popularCities = [
 ]
 
 export default function ServicePage({ params }) {
-  const { service } = params
+  const { service } = use(params)
   const router = useRouter()
   const serviceData = servicesData[service]
 
