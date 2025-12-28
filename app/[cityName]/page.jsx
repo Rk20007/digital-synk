@@ -49,7 +49,7 @@ const validCities = [
   "wakad", "hinjewadi", "baner", "kothrud", "viman-nagar", "hadapsar", "magarpatta", "pimpri-chinchwad",
   "manesar", "sohna-road", "dlf-cyber-city", "golf-course-road", "sector-62-noida", "sector-18-noida",
   "gomti-nagar", "hazratganj", "aliganj", "indira-nagar",
-  "bodakdev", "satellite", "sg-highway", "maninagar", "thaltej"
+  "bodakdev", "sg-highway", "maninagar", "thaltej"
 ];
 
 export async function generateMetadata({ params }) {
