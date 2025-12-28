@@ -71,36 +71,36 @@ export default function ServicesClient() {
         "Monthly Performance Reporting",
       ],
     },
-    {
-      slug: "whatsapp-marketing",
-      title: "WhatsApp Marketing",
-      description: "Connect with customers directly through WhatsApp business solutions.",
-      icon: MessageCircle,
-      image: "/whatsapp-business-chat-interface.jpg",
-      features: [
-        "WhatsApp Business Account Setup",
-        "WhatsApp Catalog Integration",
-        "Broadcast Messaging Campaigns",
-        "Automated Replies Setup",
-        "WhatsApp Web & Website Integration",
-        "Status & Offer Creative Design",
-      ],
-    },
-    {
-      slug: "paid-advertising",
-      title: "Paid Advertising",
-      description: "Drive targeted traffic and conversions with strategic paid campaigns.",
-      icon: Megaphone,
-      image: "/google-ads-facebook-ads-campaign-dashboard.jpg",
-      features: [
-        "Google Search & Display Ads",
-        "Call-Only Ads for Local Services",
-        "Facebook & Instagram Ads",
-        "YouTube Video Ads",
-        "Geo-Targeted Campaigns",
-        "Ads Optimization & Monthly Reports",
-      ],
-    },
+    // {
+    //   slug: "whatsapp-marketing",
+    //   title: "WhatsApp Marketing",
+    //   description: "Connect with customers directly through WhatsApp business solutions.",
+    //   icon: MessageCircle,
+    //   image: "/whatsapp-business-chat-interface.jpg",
+    //   features: [
+    //     "WhatsApp Business Account Setup",
+    //     "WhatsApp Catalog Integration",
+    //     "Broadcast Messaging Campaigns",
+    //     "Automated Replies Setup",
+    //     "WhatsApp Web & Website Integration",
+    //     "Status & Offer Creative Design",
+    //   ],
+    // },
+    // {
+    //   slug: "paid-advertising",
+    //   title: "Paid Advertising",
+    //   description: "Drive targeted traffic and conversions with strategic paid campaigns.",
+    //   icon: Megaphone,
+    //   image: "/google-ads-facebook-ads-campaign-dashboard.jpg",
+    //   features: [
+    //     "Google Search & Display Ads",
+    //     "Call-Only Ads for Local Services",
+    //     "Facebook & Instagram Ads",
+    //     "YouTube Video Ads",
+    //     "Geo-Targeted Campaigns",
+    //     "Ads Optimization & Monthly Reports",
+    //   ],
+    // },
     {
       slug: "web-app-development",
       title: "Web & App Development",
@@ -132,21 +132,21 @@ export default function ServicesClient() {
       ],
     },
  
-    {
-      slug: "content-writing",
-      title: "Content Writing & Copywriting",
-      description: "Compelling content that engages your audience and drives action.",
-      icon: PenTool,
-      image: "/content-writing-copywriting-blog-articles.jpg",
-      features: [
-        "Website Content Writing",
-        "SEO-Friendly Blogs & Articles",
-        "Social Media Captions & Ad Copy",
-        "Product Descriptions",
-        "Business Profile & About Us Page",
-        "WhatsApp & Email Message Copy",
-      ],
-    },
+    // {
+    //   slug: "content-writing",
+    //   title: "Content Writing & Copywriting",
+    //   description: "Compelling content that engages your audience and drives action.",
+    //   icon: PenTool,
+    //   image: "/content-writing-copywriting-blog-articles.jpg",
+    //   features: [
+    //     "Website Content Writing",
+    //     "SEO-Friendly Blogs & Articles",
+    //     "Social Media Captions & Ad Copy",
+    //     "Product Descriptions",
+    //     "Business Profile & About Us Page",
+    //     "WhatsApp & Email Message Copy",
+    //   ],
+    // },
     {
       slug: "graphic-design",
       title: "Graphic Designing",
@@ -234,7 +234,7 @@ export default function ServicesClient() {
                         variant="outline"
                         className="flex-1 bg-transparent hover:bg-primary hover:text-primary-foreground"
                       >
-                        <Link href={`/services/${service.slug}/gurgaon`}>
+                        <Link href={`/services/${service.slug}`}>
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>

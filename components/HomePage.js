@@ -58,27 +58,27 @@ export default function HomePage({city}) {
         "Manage reviews and build trust in your community",
       ],
     },
-    {
-      title: "Google Advertising (PPC)",
-      description:
-        "Want results fast? Google Ads put your brand at the top of search results instantly with data-driven campaigns.",
-      icon: Globe,
-      image: "/google-ads-facebook-ads-campaign-dashboard.jpg",
-      slug: "google-ads",
-      details: [
-        "Search ads that target high-intent customers",
-        "Display ads that boost brand awareness",
-        "Remarketing ads that bring back lost visitors",
-        "Smart budget management for maximum ROI",
-      ],
-    },
+    // {
+    //   title: "Google Advertising (PPC)",
+    //   description:
+    //     "Want results fast? Google Ads put your brand at the top of search results instantly with data-driven campaigns.",
+    //   icon: Globe,
+    //   image: "/google-ads-facebook-ads-campaign-dashboard.jpg",
+    //   slug: "google-ads",
+    //   details: [
+    //     "Search ads that target high-intent customers",
+    //     "Display ads that boost brand awareness",
+    //     "Remarketing ads that bring back lost visitors",
+    //     "Smart budget management for maximum ROI",
+    //   ],
+    // },
     {
       title: "Facebook & Instagram Advertising",
       description:
         "Social media is where your customers spend most of their time. Reach them with the right message at the right moment.",
       icon: Share2,
       image: "/social-media-marketing-engagement-analytics.jpg",
-      slug: "social-media-marketing",
+      slug: "facebook-instagram-ads",
       details: [
         "Eye-catching visuals and videos that capture attention",
         "Laser-targeted campaigns based on demographics and interests",
@@ -92,7 +92,7 @@ export default function HomePage({city}) {
         "Social media is more than just posts and likes—it is about building relationships with your audience.",
       icon: Zap,
       image: "/social-media-marketing-engagement-analytics.jpg",
-      slug: "social-media",
+      slug: "social-media-marketing",
       details: [
         "Content planning and calendar creation",
         "Audience engagement and community management",
@@ -100,33 +100,33 @@ export default function HomePage({city}) {
         "Influencer partnerships to boost credibility",
       ],
     },
-    {
-      title: "Content Marketing",
-      description: "Quality content drives engagement and SEO success. We create compelling content that converts.",
-      icon: PenTool,
-      image: "/content-writing-copywriting-blog-articles.jpg",
-      slug: "content-marketing",
-      details: [
-        "Blogs, articles, and storytelling",
-        "Video and infographic creation",
-        "Email newsletters and campaigns",
-        "Case studies, whitepapers, and eBooks",
-      ],
-    },
-    {
-      title: "Web Design",
-      description:
-        "Your website is often the first impression of your business. We create modern, conversion-focused designs.",
-      icon: Code,
-      image: "/modern-web-app-development-coding.jpg",
-      slug: "web-design",
-      details: [
-        "Clean, modern, and mobile-responsive layouts",
-        "Conversion-focused designs that guide users to take action",
-        "Easy navigation for a smooth user experience",
-        "Brand-consistent visuals that build trust",
-      ],
-    },
+    // {
+    //   title: "Content Marketing",
+    //   description: "Quality content drives engagement and SEO success. We create compelling content that converts.",
+    //   icon: PenTool,
+    //   image: "/content-writing-copywriting-blog-articles.jpg",
+    //   slug: "content-marketing",
+    //   details: [
+    //     "Blogs, articles, and storytelling",
+    //     "Video and infographic creation",
+    //     "Email newsletters and campaigns",
+    //     "Case studies, whitepapers, and eBooks",
+    //   ],
+    // },
+    // {
+    //   title: "Web Design",
+    //   description:
+    //     "Your website is often the first impression of your business. We create modern, conversion-focused designs.",
+    //   icon: Code,
+    //   image: "/modern-web-app-development-coding.jpg",
+    //   slug: "web-design",
+    //   details: [
+    //     "Clean, modern, and mobile-responsive layouts",
+    //     "Conversion-focused designs that guide users to take action",
+    //     "Easy navigation for a smooth user experience",
+    //     "Brand-consistent visuals that build trust",
+    //   ],
+    // },
     {
       title: "Web Development",
       description: "Behind every beautiful website is a strong, secure, and scalable foundation built for growth.",
